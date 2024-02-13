@@ -81,3 +81,54 @@ object2 = {
 //     isLoggedin:false,
 
 // }//inncorrect because the value is mising in the object2
+let object3: {
+    name: string,
+    age: number,
+    isLoggedin: boolean
+    phone?: number // this is optional value for the object3 mean we can assign the value or not
+}
+
+object3 = {
+    name: 'sagar',
+    age: 30,
+    isLoggedin: false
+}//correct
+object3 = {
+    name: 'sagar',
+    age: 30,
+    isLoggedin: false,
+    phone: 1234567890
+}//correct
+
+// we can use 'ANY' type if we are not certain about the types of the variable
+
+const anyType: any = 'Hello'    // we can assign any type of value to the anyType variable  
+const anyType1: any = 10
+const anyType2: any = true
+const anyType3: any = [1, 2, 3]
+
+//function types
+
+const add = (a: number, b: number) => {
+    return a + b
+}
+add(10, 20)//correct
+//add('Hello', 'World')//error
+
+const add1 = (a: number, b: number): number => {
+    return a + b
+}
+add1(10, 20)//correct
+
+// above function is same as below function
+// this defines the types of the return value of the function
+
+
+// type alias 
+// we can create our own custom tpyes for the varaible for eg.
+type userType = {
+    userName: string,
+    age: number,
+    isLoggedin: boolean
+    phone?: number
+}
